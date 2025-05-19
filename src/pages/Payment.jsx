@@ -50,7 +50,7 @@ function Payment() {
         <p>{cartItems.length} items: ${cartTotal.toFixed(2)}</p>
       </div>
       
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:'20px', width:'50%',alignItems:'center'}}>
         <h3>Payment Details</h3>
         <div className="form-group">
           <label>Name on Card</label>
@@ -60,16 +60,7 @@ function Payment() {
           <label>Card Number</label>
           <input type="text" name="cardNumber" value={paymentInfo.cardNumber} onChange={handleChange} required />
         </div>
-        <div className="form-row">
-          <div className="form-group">
-            <label>Expiry Date</label>
-            <input type="text" name="expiry" placeholder="MM/YY" value={paymentInfo.expiry} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>CVV</label>
-            <input type="text" name="cvv" value={paymentInfo.cvv} onChange={handleChange} required />
-          </div>
-        </div>
+        
         
         <h3>Shipping Address</h3>
         <div className="form-group">
