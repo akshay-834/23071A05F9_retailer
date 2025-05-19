@@ -43,14 +43,14 @@ function Payment() {
   }
   
   return (
-    <div className="page">
+    <div className="page" style={{display:'flex', flexDirection:'column', gap:'20px', alignItems:'center', justifyContent:'center'}}>
       <h1>Payment</h1>
       <div className="payment-summary">
         <h3>Order Summary</h3>
         <p>{cartItems.length} items: ${cartTotal.toFixed(2)}</p>
       </div>
       
-      <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:'20px', width:'50%',alignItems:'center'}}>
+      <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:'20px', width:'50%',alignItems:'center',border:'1px solid black'}}>
         <h3>Payment Details</h3>
         <div className="form-group">
           <label>Name on Card</label>
