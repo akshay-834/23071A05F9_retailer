@@ -17,9 +17,9 @@ function Register() {
   }
   
   return (
-    <div className="page" style={{display:'flex', flexDirection:'column', gap:'20px', alignItems:'center', justifyContent:'center', height:'100vh'}}>
+    <div className="page" style={{display:'flex', flexDirection:'column', gap:'20px', alignItems:'center', justifyContent:'center'}}>
       <h1>Register</h1>
-      <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:'20px', width:'50%'}}>
+      <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:'20px', width:'50%',alignItems:'center'}}>
         <div className="form-group form-component">
           <label>Name</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -32,7 +32,7 @@ function Register() {
           <label>Confirm Password</label>
           <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" style={{width:'10%',alignItems:'center'}}>Register</button>
       </form>
     </div>
   )
