@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 function Register() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     password: '',
-    email:'',
     confirmPassword: ''
   })
   
@@ -13,7 +16,21 @@ function Register() {
   
   const handleSubmit = (e) => {
     e.preventDefault()
+    
+    // Validate passwords match
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords don't match!")
+      return
+    }
+    
+    // Add registration logic here
     console.log('Registration data:', formData)
+    
+    // Show success message
+    alert('Registration successful!')
+    
+    // Navigate to home page
+    navigate('/')
   }
   
   return (
