@@ -9,8 +9,6 @@ function Payment() {
   const [paymentInfo, setPaymentInfo] = useState({
     cardName: '',
     cardNumber: '',
-    expiry: '',
-    cvv: '',
     address: '',
     city: '',
     zip: ''
